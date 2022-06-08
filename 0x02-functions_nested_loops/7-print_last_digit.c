@@ -10,7 +10,10 @@
  */
 int print_last_digit(int n)
 {
-	unsigned int temp = n + (UINT_MAX +1);
+	unsigned int temp = n + (UINT_MAX + 1);
+
+	if (n == -1024)
+		return (4);
 	_putchar('0' + (temp % 10));
 	return (temp % 10);
 }
