@@ -17,13 +17,13 @@ void times_table(void)
 
 			if (t > 9)
 			{
-				_putchar((t / 10) + '0');
-				_putchar((t % 10) + '0');
+				_putchar('0' + (t / 10));
+				_putchar('0' + (t % 10));
 				_putchar(',');
 				_putchar(' ');
 			} else
 			{
-				_putchar(t + '0');
+				_putchar('0' + t);
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
@@ -34,11 +34,12 @@ void times_table(void)
 
 		if (t > 9)
 		{
-			_putchar((t / 10) + '0');
-			_putchar((t % 10) + '0');
+			_putchar('\b');
+			_putchar('0' + (t / 10));
+			_putchar('0' + (t % 10));
 		} else
 		{
-			_putchar(t + '0');
+			_putchar('0' + t);
 		}
 		_putchar('\n');
 		x++;
