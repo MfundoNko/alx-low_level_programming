@@ -1,7 +1,33 @@
 #include "main.h"
 
 /**
- * print_to_98
+ * print_2D - prints 2 digit int
+ * @p: number to be printed
+ */
+void print_2D(int p)
+{
+	_putchar('0' + (p / 10));
+	_putchar('0' + (p % 10));
+}
+/**
+ * print_char - prints chars
+ */
+void print_char(void)
+{
+	_putchar(',');
+	_putchar(' ');
+}
+/**
+ * print_end - prints last part
+ */
+void print_end(void)
+{
+	_putchar('9');
+	_putchar('8');
+	_putchar('\n');
+}
+/**
+ * print_to_98 - prints natural numbers
  * @n: starting integer
  */
 void print_to_98(int n)
@@ -22,8 +48,7 @@ void print_to_98(int n)
 			n++;
 		} else if (n > 9 && n <= 97)
 		{
-			_putchar('0' + (n / 10));
-			_putchar('0' + (n % 10));
+			print_2D(n);
 			n++;
 		} else if (n < -9 && n > -100)
 		{
@@ -41,14 +66,10 @@ void print_to_98(int n)
 			n--;
 		} else if (n == 99)
 		{
-			_putchar('0' + (n / 10));
-			_putchar('0' + (n % 10));
+			print_2D(n);
 			n--;
 		}
-		_putchar(',');
-		_putchar(' ');
+		print_char();
 	}
-	_putchar('9');
-	_putchar('8');
-	_putchar('\n');
+	print_end();
 }
