@@ -10,6 +10,18 @@ void print_2D(int p)
 	_putchar('0' + (p % 10));
 }
 /**
+ * print_3D -  prints 3 digits
+ * @p: number to be printed
+ */
+void print_3D(int p)
+{
+	int x = p % 100;
+
+	_putchar('0' + (p / 100));
+	_putchar('0' + (x / 10));
+	_putchar('0' + (x % 10));
+}
+/**
  * print_char - prints chars
  */
 void print_char(void)
@@ -32,8 +44,6 @@ void print_end(void)
  */
 void print_to_98(int n)
 {
-	int x;
-
 	while (n != 98)
 	{
 		if (n >= 0 && n < 10)
@@ -42,9 +52,8 @@ void print_to_98(int n)
 			n++;
 		} else if (n < 0 && n > -10)
 		{
-			x = n * (-1);
 			_putchar('-');
-			_putchar('0' + x);
+			_putchar('0' + (n * -1));
 			n++;
 		} else if (n > 9 && n <= 97)
 		{
@@ -52,18 +61,18 @@ void print_to_98(int n)
 			n++;
 		} else if (n < -9 && n > -100)
 		{
-			x = n * (-1);
 			_putchar('-');
-			_putchar('0' + (x / 10));
-			_putchar('0' + (x % 10));
+			print_2D((n * -1));
 			n++;
 		} else if (n > 99)
 		{
-			x = n % 100;
-			_putchar('0' + (n / 100));
-			_putchar('0' + (x / 10));
-			_putchar('0' + (x % 10));
+			print_3D(n);
 			n--;
+		} else if (n < -99)
+		{
+			_putchar('-');
+			print_3D((n * -1));
+			n++;
 		} else if (n == 99)
 		{
 			print_2D(n);
