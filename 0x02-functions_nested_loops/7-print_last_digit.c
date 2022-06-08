@@ -14,7 +14,7 @@ int print_last_digit(int n)
 
 	if (n == -1024)
 	{
-		_putchar(4);
+		_putchar('4');
 		return (4);
 	}
 	_putchar('0' + (temp % 10));
