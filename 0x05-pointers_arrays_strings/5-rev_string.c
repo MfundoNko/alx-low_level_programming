@@ -8,7 +8,7 @@ void rev_string(char *s)
 {
 	int x =  strlen(s), y;
 
-	char temp[x + 1];
+	char temp[x];
 
 	y = 0;
 	x -= 1;
@@ -18,5 +18,5 @@ void rev_string(char *s)
 		x--;
 		y++;
 	}
-	strcpy(s, temp);
+	s = temp;
 }
