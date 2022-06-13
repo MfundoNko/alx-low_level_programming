@@ -9,6 +9,9 @@ void print_array(int *a, int n)
 {
 	int x;
 
+	if (n <= 0)
+		return;
+
 	for (x = 0; x < n; x++)
 	{
 		if (x == (n - 1))
