@@ -19,5 +19,10 @@ void rev_string(char *s)
 		y++;
 	}
 	temp[y] = '\0';
-	s = temp;
+	char *str = temp;
+
+	for (x = 0; x < strlen(str); x++)
+	{
+		s[x] = str[x];
+	}
 }
