@@ -15,7 +15,7 @@ int main(void)
 	{
 		if (x == 100)
 		{
-			printf("Buzz");
+			printf("Buzz\n");
 			continue;
 		}
 
