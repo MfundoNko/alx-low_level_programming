@@ -21,7 +21,7 @@ void print_triangle(int size)
 			if (y >= (size - x))
 			{
 				_putchar('#');
-			} else 
+			} else
 			{
 				_putchar(' ');
 			}
